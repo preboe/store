@@ -25,10 +25,6 @@ class MaxResolutionErrorException(Exception):
     pass
 
 
-
-
-
-
 class LatestProductsManager:
 
     @staticmethod
@@ -61,14 +57,11 @@ class LatestProducts:
 
 class Category(models.Model):
 
-    name = models.CharField(max_length=255, verbose_name='Имя каткгории')
+    name = models.CharField(max_length=255, verbose_name='Имя категории')
     slug = models.SlugField(unique=True)
 
     def __str__(self):
         return self.name
-
-
-
 
 
 
@@ -97,14 +90,9 @@ class Product(models.Model):
 
 
 
-
-
-
-
-
-#мыло с нуля
-class soap_from_scratch(Product):
-
+#мыло
+class soap(Product):
+    title = models.CharField(max_length=255, verbose_name='Наименования')
     the_brand = models.CharField(max_length=255, verbose_name='Бренд')
     composition = models.CharField(max_length=255, verbose_name='Состав')
     year_creation = models.CharField(max_length=255, verbose_name='Год создание')
@@ -122,140 +110,28 @@ class soap_from_scratch(Product):
 
 
 
-
-
-#Сувенирное мыло
-class souvenir_soap(Product):
+#косметика
+class cosmetics(Product):
+    title = models.CharField(max_length=255, verbose_name='Наименования')
     the_brand = models.CharField(max_length=255, verbose_name='Бренд')
     composition = models.CharField(max_length=255, verbose_name='Состав')
     year_creation = models.CharField(max_length=255, verbose_name='Год создание')
     porfumer = models.CharField(max_length=255, verbose_name='Порфюмер')
     country = models.CharField(max_length=50, verbose_name='Страна')
 
-    def __str__(self):
-        return "{} : {}".format(self.category.name, self.title)
-
-    def get_absolute_url(self):
-        return get_product_url(self, 'product_detail')
-
-
-
-
-
-
-#децкое мыло
-class baby_soap(Product):
-    the_brand = models.CharField(max_length=255, verbose_name='Бренд')
-    composition = models.CharField(max_length=255, verbose_name='Состав')
-    year_creation = models.CharField(max_length=255, verbose_name='Год создание')
-    porfumer = models.CharField(max_length=255, verbose_name='Порфюмер')
-    country = models.CharField(max_length=50, verbose_name='Страна')
 
     def __str__(self):
         return "{} : {}".format(self.category.name, self.title)
 
     def get_absolute_url(self):
         return get_product_url(self, 'product_detail')
-
-
-
-#Бактериальная мыло
-class bacterial_soap(Product):
-
-
-    the_brand = models.CharField(max_length=255, verbose_name='Бренд')
-    composition = models.CharField(max_length=255, verbose_name='Состав')
-    year_creation = models.CharField(max_length=255, verbose_name='Год создание')
-    porfumer = models.CharField(max_length=255, verbose_name='Порфюмер')
-    country = models.CharField(max_length=50, verbose_name='Страна')
-
-    def __str__(self):
-        return "{} : {}".format(self.category.name, self.title)
-
-    def get_absolute_url(self):
-        return get_product_url(self, 'product_detail')
-
-
-
-
-#уходовое мыло
-class care_soap(Product):
-
-
-    the_brand = models.CharField(max_length=255, verbose_name='Бренд')
-    composition = models.CharField(max_length=255, verbose_name='Состав')
-    year_creation = models.CharField(max_length=255, verbose_name='Год создание')
-    porfumer = models.CharField(max_length=255, verbose_name='Порфюмер')
-    country = models.CharField(max_length=50, verbose_name='Страна')
-
-    def __str__(self):
-        return "{} : {}".format(self.category.name, self.title)
-
-    def get_absolute_url(self):
-        return get_product_url(self, 'product_detail')
-
-
-
-#Мыло скраб
-class scrub_soap(Product):
-
-
-    the_brand = models.CharField(max_length=255, verbose_name='Бренд')
-    composition = models.CharField(max_length=255, verbose_name='Состав')
-    year_creation = models.CharField(max_length=255, verbose_name='Год создание')
-    porfumer = models.CharField(max_length=255, verbose_name='Порфюмер')
-    country = models.CharField(max_length=50, verbose_name='Страна')
-
-    def __str__(self):
-        return "{} : {}".format(self.category.name, self.title)
-
-    def get_absolute_url(self):
-        return get_product_url(self, 'product_detail')
-
-
-
-
-
-
-#Крем мыло
-class cream_soap(Product):
-
-
-    the_brand = models.CharField(max_length=255, verbose_name='Бренд')
-    composition = models.CharField(max_length=255, verbose_name='Состав')
-    year_creation = models.CharField(max_length=255, verbose_name='Год создание')
-    porfumer = models.CharField(max_length=255, verbose_name='Порфюмер')
-    country = models.CharField(max_length=50, verbose_name='Страна')
-
-    def __str__(self):
-        return "{} : {}".format(self.category.name, self.title)
-
-    def get_absolute_url(self):
-        return get_product_url(self, 'product_detail')
-
-
-#Мыло под нарезку
-class Bar_soap(Product):
-    the_brand = models.CharField(max_length=255, verbose_name='Бренд')
-    composition = models.CharField(max_length=255, verbose_name='Состав')
-    year_creation = models.CharField(max_length=255, verbose_name='Год создание')
-    porfumer = models.CharField(max_length=255, verbose_name='Порфюмер')
-    country = models.CharField(max_length=50, verbose_name='Страна')
-
-    def __str__(self):
-        return "{} : {}".format(self.category.name, self.title)
-
-    def get_absolute_url(self):
-        return get_product_url(self, 'product_detail')
-
-
 
 
 
 
 #парфюм
-class natural_parfume(Product):
-
+class perfume(Product):
+    title = models.CharField(max_length=255, verbose_name='Наименования')
     tas_notes = models.CharField(max_length=255, verbose_name='Базовые ноты')
     the_brand = models.CharField(max_length=255, verbose_name='Бренд')
     year_creation = models.CharField(max_length=255, verbose_name='Год создание')
@@ -271,28 +147,6 @@ class natural_parfume(Product):
 
     def get_absolute_url(self):
         return get_product_url(self, 'product_detail')
-
-
-
-
-
-#скраб
-class scrub(Product):
-
-    the_brand = models.CharField(max_length=255, verbose_name='Бренд')
-    composition = models.CharField(max_length=255, verbose_name='Состав')
-    year_creation = models.CharField(max_length=255, verbose_name='Год создание')
-    porfumer = models.CharField(max_length=255, verbose_name='Порфюмер')
-    country = models.CharField(max_length=50, verbose_name='Страна')
-
-    def __str__(self):
-        return "{} : {}".format(self.category.name, self.title)
-
-    def get_absolute_url(self):
-        return get_product_url(self, 'product_detail')
-
-
-
 
 
 
@@ -314,9 +168,6 @@ class CartProduct(models.Model):
 
 
 
-
-
-
 class Cart(models.Model):
 
     owner = models.ForeignKey('Customer', verbose_name='Владелиц', on_delete=models.CASCADE)
@@ -326,7 +177,6 @@ class Cart(models.Model):
 
     def __str__(self):
         return str(self.id)
-
 
 
 
@@ -342,3 +192,15 @@ class Customer(models.Model):
     def __str__(self):
         return "Пользователь {} {}".format(self.user.first_name, self.user.last_name)
 
+
+
+class Specification(models.Model):
+
+    pass
+
+    # content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
+    # object_id = models.PositiveIntegerField()
+    # name = models.CharField(max_length=255, verbose_name='Имя товара для хоротеристики')
+    #
+    # def __str__(self):
+    #     return "Харатеристики для товара: {}".format(self.name)

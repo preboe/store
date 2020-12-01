@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import DeleteView
 
-from .models import soap_from_scratch, baby_soap
+from .models import soap, cosmetics, perfume
 
 def test_view(request):
     return render(request, 'base.html', {})
@@ -10,8 +10,9 @@ def test_view(request):
 class ProductDetailView(DeleteView):
 
     CT_MODEL_MODEL_CLASS = {
-        'soap_from_scratch': soap_from_scratch,
-        'baby_soap': baby_soap,
+        'soap': soap,
+        'cosmetics': cosmetics,
+        'perfume': perfume,
     }
 
     def dispatch(self, request, *args, **kwargs):
