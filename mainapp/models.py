@@ -92,7 +92,6 @@ class Product(models.Model):
 
 #мыло
 class soap(Product):
-    title = models.CharField(max_length=255, verbose_name='Наименования')
     the_brand = models.CharField(max_length=255, verbose_name='Бренд')
     composition = models.CharField(max_length=255, verbose_name='Состав')
     year_creation = models.CharField(max_length=255, verbose_name='Год создание')
@@ -112,7 +111,6 @@ class soap(Product):
 
 #косметика
 class cosmetics(Product):
-    title = models.CharField(max_length=255, verbose_name='Наименования')
     the_brand = models.CharField(max_length=255, verbose_name='Бренд')
     composition = models.CharField(max_length=255, verbose_name='Состав')
     year_creation = models.CharField(max_length=255, verbose_name='Год создание')
@@ -131,7 +129,6 @@ class cosmetics(Product):
 
 #парфюм
 class perfume(Product):
-    title = models.CharField(max_length=255, verbose_name='Наименования')
     tas_notes = models.CharField(max_length=255, verbose_name='Базовые ноты')
     the_brand = models.CharField(max_length=255, verbose_name='Бренд')
     year_creation = models.CharField(max_length=255, verbose_name='Год создание')
