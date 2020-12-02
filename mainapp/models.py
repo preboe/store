@@ -91,7 +91,7 @@ class Product(models.Model):
 
 
 #мыло
-class soap(Product):
+class Soap(Product):
     the_brand = models.CharField(max_length=255, verbose_name='Бренд')
     composition = models.CharField(max_length=255, verbose_name='Состав')
     year_creation = models.CharField(max_length=255, verbose_name='Год создание')
@@ -110,7 +110,7 @@ class soap(Product):
 
 
 #косметика
-class cosmetics(Product):
+class Cosmetics(Product):
     the_brand = models.CharField(max_length=255, verbose_name='Бренд')
     composition = models.CharField(max_length=255, verbose_name='Состав')
     year_creation = models.CharField(max_length=255, verbose_name='Год создание')
@@ -128,7 +128,7 @@ class cosmetics(Product):
 
 
 #парфюм
-class perfume(Product):
+class Perfume(Product):
     tas_notes = models.CharField(max_length=255, verbose_name='Базовые ноты')
     the_brand = models.CharField(max_length=255, verbose_name='Бренд')
     year_creation = models.CharField(max_length=255, verbose_name='Год создание')
@@ -201,3 +201,11 @@ class Specification(models.Model):
     #
     # def __str__(self):
     #     return "Харатеристики для товара: {}".format(self.name)
+
+
+class SomeModel(models.Model):
+
+    image = models.ImageField()
+
+    def __str__(self):
+        return str(self.id)

@@ -47,9 +47,10 @@ class parfumeAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Category)
-admin.site.register(soap, soapAdmin)#мыло
-admin.site.register(cosmetics, cosmeticsAdmin)#косметика
-admin.site.register(perfume, parfumeAdmin)#порфим
+admin.site.register(Soap, soapAdmin)#мыло
+admin.site.register(Cosmetics, cosmeticsAdmin)#косметика
+admin.site.register(Perfume, parfumeAdmin)#порфим
 admin.site.register(CartProduct)
 admin.site.register(Cart)
 admin.site.register(Customer)
+admin.site.register(SomeModel)
