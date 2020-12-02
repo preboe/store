@@ -38,7 +38,7 @@ class parfumeAdmin(admin.ModelAdmin):
 
     def formfield_for_foreignkey(self, db_field, request, **kwargs):
         if db_field.name == 'category':
-            return ModelChoiceField(Category.objects.filter(slug='hatural_parfume'))
+            return ModelChoiceField(Category.objects.filter(slug='parfume'))
         return super().formfield_for_foreignkey(db_field, request, **kwargs)
 
 
@@ -47,8 +47,8 @@ class parfumeAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Category)
-admin.site.register(soap, soapAdmin)#мыло с нуля
-admin.site.register(cosmetics, cosmeticsAdmin)#децкое мыло
+admin.site.register(soap, soapAdmin)#мыло
+admin.site.register(cosmetics, cosmeticsAdmin)#косметика
 admin.site.register(perfume, parfumeAdmin)#порфим
 admin.site.register(CartProduct)
 admin.site.register(Cart)
