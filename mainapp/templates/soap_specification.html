@@ -1,10 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 
-</body>
-</html>
+<table class="table">
+  <tbody>
+    <tr>
+      <td>Бренд</td>
+      <td>{{ product.the_brand }}</td>
+    </tr>
+
+    <tr>
+      <td>Состав</td>
+      <td>{{ product.composition }}</td>
+    </tr>
+
+    <tr>
+      <td>Год создание</td>
+      <td>{{ product.year_creation }}</td>
+    </tr>
+
+    <tr>
+      <td>Парфюмер</td>
+      <td>{{ product.potfumer }}</td>
+    </tr>
+
+    <tr>
+      <td>Страна</td>
+      <td>{{ product.country }}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+<!--    the_brand = models.CharField(max_length=255, verbose_name='Бренд')-->
+<!--    composition = models.CharField(max_length=255, verbose_name='Состав')-->
+<!--    year_creation = models.CharField(max_length=255, verbose_name='Год создание')-->
+<!--    porfumer = models.CharField(max_length=255, verbose_name='Порфюмер')-->
+<!--    country = models.CharField(max_length=50, verbose_name='Страна')-->
