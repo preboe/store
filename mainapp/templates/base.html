@@ -52,7 +52,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Start Bootstrap</a>
+      <a class="navbar-brand" href="{% url 'base' %}">Start Bootstrap</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -62,7 +62,7 @@
             <a class="nav-link" href="#">Корзина</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Войти</a>
+            <a class="nav-link" href="{% url 'password' %}">Войти</a>
           </li>
         </ul>
       </div>
@@ -72,17 +72,13 @@
 
   <div class="nav-scroller py-0 mb-2">
     <nav class="nav d-flex justify-content-between">
-      <a class="p-2 link-secondary"><b>BearLion</b></a>
+      <h5 class=" link-secondary">BearLion<br>cosmeties</h5>
       <a class="p-2 link-secondary" href="#">Помащь</a>
       <a class="p-2 link-secondary" href="#">Отследить заказ</a>
       <a class="p-2 link-secondary" href="#">Контакты магазина</a>
-      <a class="p-2 link-secondary" href="#">Business</a>
-      <a class="p-2 link-secondary" href="#">Politics</a>
-      <a class="p-2 link-secondary" href="#">Opinion</a>
-      <a class="p-2 link-secondary" href="#">Science</a>
-      <a class="p-2 link-secondary" href="#">Health</a>
-      <a class="p-2 link-secondary" href="#">Style</a>
-      <a class="p-2 link-secondary" href="#">Travel</a>
+      <a class="p-2 link-secondary" href="#">Отзовы</a>
+      <a class="p-2 link-secondary" href="#">О нас</a>
+      <a class="p-2 link-secondary" href="#">Рецепты</a>
     </nav>
   </div>
 </div>
@@ -140,9 +136,9 @@
 <main class="container">
   <div class="p-3 p-md-3 mb-3 text-white rounded bg-dark">
     <div class="col-md-6 px-0">
-      <h1 class="display-4 font-italic">Title of a longer featured blog post</h1>
-      <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
-      <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>
+      <h2 class="display-4 font-italic">Ограниценая колекция!!!</h2>
+      <p class="lead my-3">Мыло </p>
+      <p class="lead mb-0"><a href="#" class="text-white fw-bold">ХИТ...</a></p>
     </div>
   </div>
 
@@ -156,11 +152,11 @@
                 <h4 class="card-title">
                   <a href="#">Item Two</a>
                 </h4>
-                <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
+                <h5>250 руб.</h5>
+                <p class="card-text"></p>
               </div>
               <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                <a href="#"><button class="btn btn-danger">Добавить в корзину</button></a>
               </div>
             </div>
           </div>
@@ -173,10 +169,10 @@
                   <a href="#">Item Two</a>
                 </h4>
                 <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
+                <p class="card-text"></p>
               </div>
               <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                <a href="#"><button class="btn btn-danger">Добавить в корзину</button></a>
               </div>
             </div>
           </div>
@@ -189,10 +185,10 @@
                   <a href="#">Item Three</a>
                 </h4>
                 <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                <p class="card-text"></p>
               </div>
               <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                <a href="#"><button class="btn btn-danger">Добавить в корзину</button></a>
               </div>
             </div>
           </div>
@@ -205,10 +201,10 @@
                   <a href="#">Item Four</a>
                 </h4>
                 <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                <p class="card-text"></p>
               </div>
               <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                <a href="#"><button class="btn btn-danger">Добавить в корзину</button></a>
               </div>
             </div>
           </div>
@@ -221,10 +217,10 @@
                   <a href="#">Item Five</a>
                 </h4>
                 <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
+                <p class="card-text"></p>
               </div>
               <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                <a href="#"><button class="btn btn-danger">Добавить в корзину</button></a>
               </div>
             </div>
           </div>
@@ -237,10 +233,10 @@
                   <a href="#">Item Six</a>
                 </h4>
                 <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                <p class="card-text"></p>
               </div>
               <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                <a href="#"><button class="btn btn-danger">Добавить в корзину</button></a>
               </div>
             </div>
           </div>

@@ -1,10 +1,18 @@
 from django.shortcuts import render
 from django.views.generic import DeleteView
-
 from .models import Soap, Cosmetics, Perfume
+
+from .forms import LoginForm
+
+
+
+
 
 def test_view(request):
     return render(request, 'base.html', {})
+
+def password(request):
+    return render(request, 'password.html',)
 
 
 class ProductDetailView(DeleteView):
@@ -25,3 +33,5 @@ class ProductDetailView(DeleteView):
     context_object_name = 'prodect'
     template_name = 'product_detail.html'
     slug_url_kwarg = 'slug'
+
+
